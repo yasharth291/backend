@@ -7,6 +7,11 @@ const UserSchema = require('../schemas/User');
 const User = require("../schemas/User");
 const config = require('config');
 
+router.get(
+    '/',
+    async (req,res) => {
+    return res.status(200).json({msg : "hello"});
+    });
 
 router.post(
     '/signup',
