@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
-  "scripts": "npm start server.js",
+  "scripts": "node start server.js",
   "author": "Yasharth Dubey",
   "license": "ISC",
   "dependencies": {
