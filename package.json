@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "test": "node server.js"
-  },,
+  },
   "author": "Yasharth Dubey",
   "license": "ISC",
   "dependencies": {
