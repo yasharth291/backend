@@ -92,7 +92,7 @@ router.post(
                 return res.status(401).json("Not Found");
             }
 
-            let isPasswordMatch = await bcryptjs.compare(password,user.password);
+            let isPasswordMatch = await bcryptjs.compare(user.password,password);
 
             if(isPasswordMatch){
                 const payload = {
