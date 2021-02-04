@@ -80,7 +80,7 @@ router.post(
     ],
     async (req,res) => {
         try {
-            const {email,password} = req.body;
+            let {email,password} = req.body;
             const errors = validationResult(req);
             let user = await UserSchema.findOne({email})
 
