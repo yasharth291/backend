@@ -81,6 +81,7 @@ router.post(
     async (req,res) => {
         try {
             let {email,password} = req.body;
+            console.log(req.body);
             const errors = validationResult(req);
             let user = await UserSchema.findOne({email})
 
@@ -115,7 +116,7 @@ router.post(
                 
             }
             else {
-                res.status(401).send('password dont match');
+                res.status(401).json('password dont match');
             }
 
        } catch (error){
