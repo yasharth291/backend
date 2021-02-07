@@ -80,7 +80,8 @@ router.post(
     ],
     async (req,res) => {
         try {
-            const {email,password} = req.body;
+            let {email,password} = req.body;
+            console.log(req.body);
             const errors = validationResult(req);
             let user = await UserSchema.findOne({email})
 
@@ -92,9 +93,9 @@ router.post(
                 return res.status(401).json("Not Found");
             }
 
-            let isPasswordMatch = await bcryptjs.compare(password,user.password);
+            let isPasswordMatch = await bcryptjs.compare(password,user.password,);
 
-            if(isPasswordMatch){
+            if(isPasswordMatch === true){
                 const payload = {
                     user : {
                         id : user.id
@@ -115,7 +116,7 @@ router.post(
                 
             }
             else {
-                res.status(401).send('password dont match');
+                res.status(401).json('password dont match');
             }
 
        } catch (error){
