@@ -15,6 +15,7 @@
     "config": "^3.3.3",
     "detect-file-type": "^0.2.8",
     "dotenv": "^8.2.0",
+    "eslint": "^7.26.0",
     "express": "^4.17.1",
     "express-validator": "^6.9.2",
     "forever": "^3.0.4",
@@ -23,6 +24,7 @@
     "mongoose": "^5.11.14",
     "multer": "^1.4.2",
     "path": "^0.12.7",
+    "prettier": "^2.3.0",
     "uuid": "^8.3.2"
   }
 }
